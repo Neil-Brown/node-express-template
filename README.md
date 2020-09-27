@@ -1,4 +1,4 @@
-# node-express-template
+# Node-Express-Template
 
 A template for creating fast and secure Express Applications. 
 Content Security Policy has been set up using [Helmet](https://helmetjs.github.io/). 
