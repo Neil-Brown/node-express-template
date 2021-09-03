@@ -1,0 +1,101 @@
+extends index
+
+block append css
+	link(href='/css/piano.css' rel='stylesheet' type='text/css')
+
+block main
+	#p-wrapper.container
+		.row
+			.col-sm.left C
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left B
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left A#
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left A
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left G#
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left G
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left F#
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left F
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note.show
+		.row
+			.col-sm.left E
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note.show
+			.col-sm.note
+		.row
+			.col-sm.left D#
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left D
+			.col-sm.note
+			.col-sm.note.show
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left C#
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		.row
+			.col-sm.left C
+			.col-sm.note.active
+			.col-sm.note
+			.col-sm.note
+			.col-sm.note
+		#btn-div.text-center
+			button.btn.btn-primary#listen(type="button" data-bs-toggle="button" autocomplete="off") Listen
+			button.btn.btn-primary(type="button" data-bs-toggle="button" autocomplete="off") Sing
+block append scripts
+	script(src='../js/midi/audioDetect.js' type='text/javascript')
+	script(src='../js/midi/gm.js' type='text/javascript')
+	script(src='../js/midi/loader.js' type='text/javascript')
+	script(src='../js/midi/plugin.audiotag.js' type='text/javascript')
+	script(src='../js/midi/plugin.webaudio.js' type='text/javascript')
+	script(src='../js/midi/plugin.webmidi.js' type='text/javascript')
+	script(src='../js/util/dom_request_xhr.js' type='text/javascript')
+	script(src='../inc/shim/Base64.js' type='text/javascript')
+	script(src='../inc/shim/Base64binary.js' type='text/javascript')
+	script(src='../inc/shim/WebAudioAPI.js' type='text/javascript')
+	script(src='../js/util/dom_request_script.js' type='text/javascript')
+	script(src="/js/piano.js")
