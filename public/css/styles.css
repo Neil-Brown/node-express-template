@@ -1,0 +1,20 @@
+.navbar{
+    background-color:#34495E;
+    margin:0
+}
+
+.navbar-brand img{
+    width:2rem;
+    height:2rem;
+    margin-right:1rem;
+}
+
+.navbar a{
+    color:#BDC3C7
+}
+
+.navbar a:hover{
+    color:#E67E22
+}
+
+

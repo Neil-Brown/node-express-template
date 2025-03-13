@@ -1,50 +1,5 @@
-extends index.pug
-	block append css
-		// polyfill
-		script(src='../inc/shim/Base64.js' type='text/javascript')
-		script(src='../inc/shim/Base64binary.js' type='text/javascript')
-		script(src='../inc/shim/WebAudioAPI.js' type='text/javascript')
-		// midi.js package
-		script(src='../js/midi/audioDetect.js' type='text/javascript')
-		script(src='../js/midi/gm.js' type='text/javascript')
-		script(src='../js/midi/loader.js' type='text/javascript')
-		script(src='../js/midi/plugin.audiotag.js' type='text/javascript')
-		script(src='../js/midi/plugin.webaudio.js' type='text/javascript')
-		script(src='../js/midi/plugin.webmidi.js' type='text/javascript')
-		// utils
-		script(src='../js/util/dom_request_xhr.js' type='text/javascript')
-		script(src='../js/util/dom_request_script.js' type='text/javascript')
-		link(href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css')
-		style.
-			body { font: 14pt 'Alike', sans-serif;}
-			#note { font-size: 164px; }
-			.droptarget { background-color: #348781}
-			div.confident { color: black; }
-			div.vague { color: lightgrey; }
-			#note { display: inline-block; height:180px; text-align: left;}
-			#detector { width: 300px; height: 300px; border: 4px solid gray; border-radius: 8px; text-align: center; padding-top: 10px;}
-			#output { width: 300px; height: 42px; }
-			#flat { display: none; }
-			#sharp { display: none; }
-			.flat #flat { display: inline; }
-			.sharp #sharp { display: inline; }
-	body
-		button#start Start
-		p
-			button(onclick='toggleLiveInput()') Note
-			button(onclick='toggleLiveInput()') Chord
-		#detector.vague
-			.pitch
-				span#pitch --
-				| Hz
-			.note
-				span#note --
-			canvas#output(width='300' height='42')
-			#detune
-				span#detune_amt --
-				span#flat cents ♭
-				span#sharp cents ♯
-		//
-			just used for debugging
-			<canvas id="waveform" width="512" height="256"></canvas>
-		script(src='js/pitchdetect.js')
+extends header.pug
+
+block main
+	h1= nonce
+

@@ -1,0 +1,24 @@
+extends index.pug
+
+block header
+  nav.navbar.navbar-expand-sm.navbar-light.bg-light
+    .container-fluid
+      a.navbar-brand(href='#') My Website
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item.active
+            a.nav-link(href='#') Home
+          li.nav-item
+            a.nav-link(href='#about') About
+          li.nav-item
+            a.nav-link(href='#services') Services
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href='#' id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              | Dropdown
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='#action1') Action 1
+              a.dropdown-item(href='#action2') Action 2
+              div.dropdown-divider
+

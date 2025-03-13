@@ -36,6 +36,10 @@ Open up your browser and goto
 ```localhost:3000```
 where you will find your app running.
 
+## Bootstrap
+This template tries to download Bootstrap Native from a CDN
+If this fails it will default to the local copy.
+
 ## Make it your Own
 
 * Edit the ```views/home pug``` template to show your homepage

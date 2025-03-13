@@ -1,7 +1,7 @@
 {
-  "name": "node-express-template",
+  "name": "express-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "A template for creating fast and secure Express Applications. \r Content Security Policy has been set up using [Helmet](https://helmetjs.github.io/). \r Compression has been added using the node middleware [Compression](https://www.npmjs.com/package/compression)\r The template has been setup to use Bootstrap CSS and Bootstrap-native Javascript as a CDN but will fall back on local copies if the CDN is unavailable.\r Both CDN's have been allowed through the CSP\r [Bootstrap-native](https://thednp.github.io/bootstrap.native/) has been used for added performance. Bulky ```j-query``` and ```popper``` libraries are not required",
   "main": "index.js",
   "scripts": {
     "build-css": "./bin/build-css",
@@ -9,14 +9,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Neil Brown",
   "license": "ISC",
   "dependencies": {
     "compression": "^1.7.4",
-    "express": "^4.17.1",
+    "express": "^4.21.2",
     "helmet": "^4.1.1",
     "jade": "^1.11.0",
     "pug": "^3.0.0",
     "socket.io": "^1.4.5"
+  },
+  "directories": {
+    "example": "examples"
   }
 }
