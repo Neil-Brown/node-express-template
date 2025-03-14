@@ -9,9 +9,9 @@ block header
       #navbarNav.collapse.navbar-collapse
         ul.navbar-nav
           li.nav-item.active
-            a.nav-link(href='#') Home
+            a#register.nav-link(href="#register-window" data-bs-toggle="modal") Register
           li.nav-item
-            a.nav-link(href='#about') About
+            a#login.nav-link(href="#login-window" data-bs-toggle="modal") Login
           li.nav-item
             a.nav-link(href='#services') Services
           li.nav-item.dropdown
@@ -21,4 +21,6 @@ block header
               a.dropdown-item(href='#action1') Action 1
               a.dropdown-item(href='#action2') Action 2
               div.dropdown-divider
+block append scripts
+    include includes/signin.pug
 

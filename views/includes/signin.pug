@@ -1,0 +1,58 @@
+#login-window.modal.fade(tabindex='-1' role='dialog' aria-labelledby='Login' aria-hidden='true')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header.text-center
+				h4.modal-title.w-100.font-weight-bold Login
+				button.close(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+			.modal-body.mx-4
+				#loginAlert(role="alert")
+				form#loginForm(method="POST" action="/login")
+					.form-group
+						.md-form.mb-2
+							input.mail.form-control.validate(type='text' placeholder="Email" name="email")
+						.md-form.mb-2
+							input.password.form-control.validate(type='password' placeholder ="Password" name="password")
+						.modal-footer.justify-content-center
+							button.btn.btn-primary#loginButton(type="submit") Log in
+							p.forgotPassword Forgot Password?
+
+#reset-window.modal.fade(tabindex='-1' role='dialog' aria-labelledby='reset' aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			.modal-header.text-center
+				h4.modal-title.w-100.font-weight-bold Forgot Password
+				button.close(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+			.modal-body.mx-4
+				#resetAlert(role="alert")
+				form#resetForm(action="/forgotPassword" method="post" enctype="multipart/form-data")
+					.form-group
+						.md-form.mb-2
+							input.mail.form-control.validate(type='text' placeholder="Name" name="name")
+						.md-form.mb-2
+							input.mail.form-control.validate(type='email' placeholder ="Email" name="email")
+						.modal-footer.justify-content-center
+							button.btn.btn-primary#resetButton(type="submit") Reset
+
+#register-window.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header.text-center
+				h4.modal-title.w-100.font-weight-bold Register
+				button.close(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+			.modal-body.mx-4
+				#register-alert(role="alert")
+				form#registerForm
+						.form-group(method="POST" action="register")
+							.md-form.mb-2.field
+								input.username.form-control.validate(type='text' placeholder="Username" name="username")
+							.md-form.mb-2
+								input.mail.form-control.validate(type='text' placeholder="Email" name="email")
+							.md-form.mb-2
+								input.password.form-control.validate(type='password' placeholder ="Password" name="password")
+							.md-form.mb-2
+								input.confirmPassword.form-control.validate(type='password' placeholder ="Confirm Password" name="confirmPassword")
+								.modal-footer.d-flex.justify-content-center
+										button.btn.btn-primary#registerButton Sign up
+
+block append scripts
+	script(src="/js/signin.js")
